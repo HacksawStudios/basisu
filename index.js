@@ -1,17 +1,21 @@
-var binwrap = require("binwrap");
-var path = require("path");
- 
-var packageInfo = require(path.join(__dirname, "package.json"));
-var version = packageInfo.version;
-var root = "https://dl.bintray.com/me/myApp/" + version;
- 
-module.exports = binwrap({
-  dirname: __dirname,
-  binaries: [
-    "myapp-cli"
-  ],
-  urls: {
-    "linux-x64": root + "/linux-x64.tgz",
-    "win32-x64": root + "/win-x64.zip"
-  }
-});
+var os = require('os')
+var path = require('path')
+
+var platform = os.platform()
+
+if (platform !== 'linux' && platform !== 'win') {
+  console.error('Unsupported platform.', platform);
+  process.exit(1)
+}
+
+var arch = os.arch()
+
+var basisuPath = path.join(
+  __dirname,
+  'bin',
+  platform,
+  arch,
+  platform === 'win' ? 'basisu.exe' : 'basisu'
+)
+
+exports.path = basisuPath;
