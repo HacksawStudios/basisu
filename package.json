@@ -1,0 +1,28 @@
+{
+  "name": "basisu",
+  "version": "1.0.0",
+  "description": "Basis Universal encoder binaries",
+  "preferGlobal": true,
+  "main": "index.js",
+  "scripts": {
+    "install": "binwrap-install",
+    "prepare": "binwrap-prepare",
+    "test": "binwrap-test",
+    "prepublish": "npm test"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmustiata/fast-live-reload.git"
+  },
+  "files": [
+    "index.js",
+    "bin"
+  ],
+  "bin": {
+    "basisui-cli": "bin/basisu-cli"
+  },
+  "dependencies": {
+    "binwrap": "^0.2.2"
+  }
+}
