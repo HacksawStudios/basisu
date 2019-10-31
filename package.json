@@ -10,5 +10,6 @@
     "type": "git",
     "url": "https://github.com/HacksawStudios/basisu.git"
   },
+  "bin": "bin/basisu.js",
   "dependencies": {}
 }
