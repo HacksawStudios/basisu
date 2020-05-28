@@ -9,7 +9,7 @@ let platform = os.platform()
 if(platform=='win32') {
   platform = 'win';
 }
-if (platform !== 'linux' && platform !== 'win') {
+if (platform !== 'linux' && platform !== 'win' && platform !== 'darwin') {
   console.error('Unsupported platform.', platform);
   process.exit(1)
 }
