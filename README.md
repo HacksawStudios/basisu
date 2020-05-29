@@ -1,6 +1,6 @@
 # basisu
 
-basisu static binaries for Linux and Windows
+basisu static binaries for Linux, Windows and macOS
 
 Encoder for basis unversal texture format:
 https://github.com/BinomialLLC/basis_universal
@@ -19,5 +19,5 @@ See documentation for basisu. Simply prefix command with npx:
 npx basisu x.png
 ```
 
-Currently supports Linux (64-bit) and Windows
-(64-bit).
+Currently supports Linux (64-bit), Windows
+(64-bit), macOS (64-bit).
