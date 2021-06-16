@@ -9,6 +9,10 @@ let platform = os.platform()
 if(platform=='win32') {
   platform = 'win';
 }
+if(platform == 'darwin') {
+  console.error('Darwin not supported in this version. Make a pull request with an image if you need it or use older version.', platform);
+  process.exit(1)
+}
 if (platform !== 'linux' && platform !== 'win' && platform !== 'darwin') {
   console.error('Unsupported platform.', platform);
   process.exit(1)
