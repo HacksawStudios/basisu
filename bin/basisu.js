@@ -4,6 +4,7 @@ const args = process.argv.slice(2);
 
 const os = require('os')
 const path = require('path')
+const fs = require('fs-extra')
 
 let platform = os.platform()
 if(platform=='win32') {
@@ -26,7 +27,11 @@ const basisuPath = path.join(
   arch,
   platform === 'win' ? 'basisu.exe' : 'basisu'
   )
-  
+
+if (platform === 'linux' || platform === 'darwin') {
+  fs.chmodSync(basisuPath, 0755);
+}
+
 execFile(basisuPath, args, (err, stdout, stderr) => {
     if (err) {
       console.log(`err: ${err}`);
