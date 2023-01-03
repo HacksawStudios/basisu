@@ -11,5 +11,8 @@
     "url": "https://github.com/HacksawStudios/basisu.git"
   },
   "bin": "bin/basisu.js",
-  "dependencies": {}
+  "dependencies": {
+    "cpu-features": "^0.0.4",
+    "fs-extra": "^11.1.0"
+  }
 }

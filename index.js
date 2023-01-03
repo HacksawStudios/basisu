@@ -1,7 +1,11 @@
 var os = require('os')
 var path = require('path')
+const features = require('cpu-features')();
 
-var platform = os.platform()
+let platform = os.platform()
+if (platform == 'win32') {
+  platform = 'win';
+}
 
 if (platform !== 'linux' && platform !== 'win' && platform !== 'darwin') {
   console.error('Unsupported platform.', platform);
@@ -14,7 +18,7 @@ var basisuPath = path.join(
   __dirname,
   'bin',
   platform,
-  arch,
+  (features.flags.sse4_1 === true ? `${arch}_sse` : arch),
   platform === 'win' ? 'basisu.exe' : 'basisu'
 )
 
