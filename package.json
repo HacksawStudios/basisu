@@ -12,6 +12,7 @@
   },
   "bin": "bin/basisu.js",
   "dependencies": {
-    "cpu-features": "^0.0.4"
+    "cpu-features": "^0.0.4",
+    "fs-extra": "^11.1.0"
   }
 }
