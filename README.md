@@ -1,6 +1,6 @@
 # basisu
 
-basisu static binaries for Linux and Windows
+basisu static binaries for Linux (ARM, x64, x64 with SSE4.1), Darwin (ARM, x64, x64 with SSE4.1) and Windows (x64, x64 with SSE4.1).
 
 Encoder for basis unversal texture format:
 https://github.com/BinomialLLC/basis_universal
@@ -18,6 +18,3 @@ See documentation for basisu. Simply prefix command with npx:
 ``` bash
 npx basisu x.png
 ```
-
-Currently supports Linux (64-bit), Windows
-(64-bit).
